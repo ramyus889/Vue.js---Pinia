@@ -5,7 +5,9 @@ import UseHeader from './component/UseHeader.vue';
 <template>
   <div class="">
     <div class="">
-      <UseHeader />
+      <div class="hidden">
+        <UseHeader />
+      </div>
       <RouterView />
     </div>
   </div>
