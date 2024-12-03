@@ -37,7 +37,10 @@ function isActive(path) {
 
       <div class="" v-if="taskStore.loading">Loading tasks...</div>
 
-      <div class="flex flex-col h-[270px] gap-3 overflow-y-auto" v-if="filter === 'all'">
+      <div
+        class="flex flex-col h-[270px] gap-3 overflow-y-auto hide-scrollbar"
+        v-if="filter === 'all'"
+      >
         <div class="sticky top-0 bg-[#181818] z-[1000] py-1">
           All tasks ({{ taskStore.totalCount }})
         </div>
@@ -45,7 +48,10 @@ function isActive(path) {
           <TaskDetails :task="task" />
         </div>
       </div>
-      <div class="flex flex-col h-[270px] gap-3 overflow-y-auto" v-if="filter === 'favs'">
+      <div
+        class="flex flex-col h-[270px] gap-3 overflow-y-auto hide-scrollbar"
+        v-if="filter === 'favs'"
+      >
         <div class="sticky top-0 bg-[#181818] z-[1000] py-1">
           Favorite tasks ({{ taskStore.favCount }})
         </div>
@@ -56,3 +62,8 @@ function isActive(path) {
     </div>
   </div>
 </template>
+<style scoped>
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+</style>
