@@ -1,7 +1,0 @@
-@use './_variables' as vars;
-
-@for $i from 1 to 1000 {
-  .#{vars.$UseRounded}-#{$i + 1} {
-    border-radius: $i * 1px;
-  }
-}

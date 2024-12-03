@@ -1,7 +1,0 @@
-@use './_variables' as vars;
-
-@for $i from 1 to 1000 {
-  .#{vars.$UseBorder}-#{$i + 1} {
-    border: $i * 1px solid #64748b;
-  }
-}

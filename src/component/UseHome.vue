@@ -1,11 +1,11 @@
 <script setup>
-import UseDefualt from './UseDefualt.vue';
+import UsePinia from './UsePinia.vue';
 </script>
 
 <template>
   <div class="mt-20 ms-20">
     <div class="">
-      <UseDefualt />
+      <UsePinia />
     </div>
   </div>
 </template>

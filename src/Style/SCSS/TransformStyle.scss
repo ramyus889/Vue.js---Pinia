@@ -1,7 +1,0 @@
-@use './_variables' as vars;
-
-@for $i from 1 to 1000 {
-  .#{vars.$UseRotate}-#{$i + 1} {
-    transform: rotate($i * 1deg);
-  }
-}

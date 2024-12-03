@@ -1,12 +1,3 @@
-import '../src/Style/CSS/BorderRStyle.css';
-import '../src/Style/CSS/BorderStyle.css';
-import '../src/Style/CSS/HeightStyle.css';
-import '../src/Style/CSS/MarginStyle.css';
-import '../src/Style/CSS/PaddingStyle.css';
-import '../src/Style/CSS/TransformStyle.css';
-import '../src/Style/CSS/TransitionStyle.css';
-import '../src/Style/CSS/WidthStyle.css';
-import '../src/Style/SCSS/Style.scss';
 import './style.css';
 
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue';

@@ -1,6 +1,0 @@
-@use './_variables' as vars;
-@for $i from 1 to 1000 {
-  .#{vars.$UseHeight}-#{$i + 1} {
-    height: $i * 1px;
-  }
-}

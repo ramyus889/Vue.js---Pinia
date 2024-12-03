@@ -1,7 +1,0 @@
-@use './_variables' as vars;
-
-@for $i from 1 to 1000 {
-  .#{vars.$UseWidth}-#{$i + 1} {
-    width: $i * 1px;
-  }
-}
