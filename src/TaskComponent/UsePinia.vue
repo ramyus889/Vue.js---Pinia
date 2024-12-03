@@ -16,7 +16,7 @@ function isActive(path) {
 </script>
 
 <template>
-  <div class="flex px-5 place-content-center">
+  <div class="flex px-5 mb-10 place-content-center">
     <div class="flex flex-col gap-14 sm:max-w-[400px] w-full">
       <div class="flex items-center gap-5 place-content-center">
         <img
