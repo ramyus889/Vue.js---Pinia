@@ -31,18 +31,45 @@ export const useTaskStore = defineStore('taskStore', {
         this.loading = false;
       }
     },
-    addTask(task) {
-      this.tasks.push(task);
+    async addTask(task) {
+      try {
+        const response = await axios.post('https://ea177686cdf3dfbf.mokky.dev/itemsPinia', task, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        this.tasks.push(response.data);
+      } catch (error) {
+        console.error('Failed to add task:', error);
+      }
     },
-    deleteTask(id) {
-      this.tasks = this.tasks.filter((t) => {
-        return t.id !== id;
-      });
+    async deleteTask(id) {
+      try {
+        await axios.delete(`https://ea177686cdf3dfbf.mokky.dev/itemsPinia/${id}`);
+        this.tasks = this.tasks.filter((t) => t.id !== id);
+      } catch (error) {
+        console.error('Failed to delete task:', error);
+      }
     },
-    toggleFav(id) {
+    async toggleFav(id) {
       const task = this.tasks.find((t) => t.id === id);
       if (task) {
         task.isFav = !task.isFav;
+        try {
+          await axios.patch(
+            `https://ea177686cdf3dfbf.mokky.dev/itemsPinia/${id}`,
+            {
+              isFav: task.isFav
+            },
+            {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }
+          );
+        } catch (error) {
+          console.error('Failed to toggle favorite status:', error);
+        }
       }
     }
   }
