@@ -1,5 +1,5 @@
 <script setup>
-import UsePinia from './UsePinia.vue';
+import UsePinia from '../TaskComponent/UsePinia.vue';
 </script>
 
 <template>
