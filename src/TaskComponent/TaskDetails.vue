@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { useTaskStore } from '../store/TaskStore';
+import { useTaskStore } from './store/TaskStore';
 defineProps(['task']);
 
 const taskStore = useTaskStore();

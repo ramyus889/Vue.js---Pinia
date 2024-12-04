@@ -1,11 +1,7 @@
-<script setup>
-import UsePinia from '../TaskComponent/UsePinia.vue';
-</script>
+<script setup></script>
 
 <template>
-  <div class="mt-8 sm:mt-20">
-    <div class="">
-      <UsePinia />
-    </div>
+  <div class="">
+    <div class="">Frontend</div>
   </div>
 </template>

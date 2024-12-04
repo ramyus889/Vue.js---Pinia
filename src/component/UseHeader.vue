@@ -13,6 +13,21 @@ const items = [
     id: 1,
     name: 'Home',
     pathItems: `/`
+  },
+  {
+    id: 2,
+    name: 'TaskPinia',
+    pathItems: `/Pinia`
+  },
+  {
+    id: 3,
+    name: 'CountPinia',
+    pathItems: `/CountPinia`
+  },
+  {
+    id: 4,
+    name: 'CountView',
+    pathItems: `/CountView`
   }
 ];
 </script>

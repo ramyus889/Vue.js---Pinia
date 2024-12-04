@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import TaskForm from './TaskForm.vue';
 import TaskDetails from './TaskDetails.vue';
+import TaskForm from './TaskForm.vue';
 
-import { useTaskStore } from '../store/TaskStore';
+import { useTaskStore } from './store/TaskStore';
 const taskStore = useTaskStore();
 
 taskStore.fetchTasks();
@@ -16,7 +16,7 @@ function isActive(path) {
 </script>
 
 <template>
-  <div class="flex px-5 mb-10 place-content-center">
+  <div class="flex px-5 mt-8 mb-10 place-content-center sm:mt-20">
     <div class="flex flex-col gap-10 sm:max-w-[400px] w-full">
       <div class="flex items-center gap-5 place-content-center">
         <img

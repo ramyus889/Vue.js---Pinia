@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { useTaskStore } from '../store/TaskStore';
+import { useTaskStore } from './store/TaskStore';
 
 const taskStore = useTaskStore();
 const newTask = ref('');
